@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Jungle</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text"><span>It's time for a new</span><br />Adventure</h2>
+      <img src="images/bird1.png" id="bird1" />
+      <img src="images/bird2.png" id="bird2" />
+      <img src="images/forest.png" id="forest" />
+      <a href="#" id="btn">Explore</a>
+      <img src="images/rocks.png" id="rocks" />
+      <img src="images/water.png" id="water" />
+    </section>
+    <div class="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut
+        elit turpis. Fusce aliquam sapien vitae risus lacinia feugiat. Ut
+        consectetur leo et ipsum tincidunt fringilla. Mauris sagittis commodo
+        pharetra. Curabitur porttitor accumsan dolor sit amet ultrices. Nam ac
+        eros sed mi consectetur ultricies in nec sem. Nam sit amet mauris diam.
+        Morbi nisl sapien, auctor ac convallis sit amet, laoreet non dui. Mauris
+        sit amet luctus nunc. In ut turpis quis sapien tincidunt laoreet sed
+        pharetra orci. Nullam congue nibh et lorem ullamcorper, ac porttitor
+        justo egestas. Sed id diam eget sapien dignissim aliquam a id augue.
+        Proin et felis bibendum, convallis dui vel, volutpat mi. Pellentesque mi
+        massa, venenatis quis faucibus in, bibendum a lectus. Donec finibus
+        tellus ut odio rutrum, quis malesuada elit eleifend. Vivamus laoreet
+        efficitur mi sed sodales.<br /><br />
+
+        Vivamus libero eros, sodales a ipsum non, imperdiet pellentesque orci.
+        Integer rhoncus nisi at nisl congue, id ultrices augue ultrices.
+        Phasellus rutrum lorem nec magna ultricies, in blandit justo tincidunt.
+        Nunc rhoncus mauris consectetur sodales faucibus. Proin laoreet quam
+        risus, id rutrum sem dignissim at. Quisque orci dui, iaculis vel
+        consequat vitae, condimentum pulvinar justo. Fusce non sodales eros, eu
+        faucibus turpis.<br /><br />
+
+        Aliquam imperdiet nibh ut nulla congue, nec scelerisque urna ornare. Ut
+        sed lacus augue. Maecenas dapibus felis in tortor rutrum, ut tempor
+        purus rutrum. Donec id risus non nisl auctor tincidunt et a metus. Cras
+        ultrices, nulla ut porta vulputate, est ipsum vehicula enim, vitae
+        sodales lorem ipsum vel orci. Maecenas sapien enim, gravida non
+        tincidunt vel, fermentum eget ex. Nam accumsan velit non nisi lobortis,
+        ut ullamcorper tellus gravida. Vivamus quis urna at lectus imperdiet
+        tincidunt. Vestibulum convallis elit vitae malesuada rutrum. Nunc luctus
+        dolor vitae varius vehicula.<br /><br />
+
+        Suspendisse lacinia pharetra purus non elementum. Vestibulum tristique
+        lacus nec arcu congue, id lacinia ligula iaculis. Proin vel lobortis
+        arcu, et accumsan ante. Curabitur aliquet, neque vitae suscipit
+        tincidunt, magna neque scelerisque tellus, vulputate consectetur arcu
+        risus at eros. Aenean ut dapibus nulla. Aliquam suscipit risus id
+        pretium vehicula. Suspendisse nisl nisl, tincidunt id sodales ac,
+        sodales quis velit. Suspendisse fringilla, mauris quis ultrices laoreet,
+        sapien orci condimentum orci, et sodales velit ex vel massa. Morbi
+        iaculis molestie pellentesque. Sed diam dui, dictum et venenatis id,
+        fringilla nec elit. Curabitur non nisl eu est auctor tempor sit amet nec
+        elit. Phasellus porta mattis mollis. Ut pretium fermentum sem sed
+        congue. Aenean egestas sagittis malesuada. Pellentesque turpis ipsum,
+        placerat at varius ac, interdum ut massa.<br /><br />
+
+        Fusce ullamcorper ante a felis placerat, eu ullamcorper sem gravida.
+        Fusce at dui id est placerat ornare mollis sit amet libero. Sed eleifend
+        augue vel lorem pellentesque cursus. Ut sed rutrum turpis. Phasellus vel
+        semper enim. Maecenas felis justo, tincidunt eu eros at, volutpat
+        sagittis arcu. Duis pretium, sem quis placerat mattis, quam nisi cursus
+        tellus, a euismod enim magna molestie massa. Nullam at lacinia neque.
+        Morbi tellus est, lobortis nec nulla a, lobortis maximus libero. Nulla
+        pulvinar faucibus dapibus. Phasellus ut pretium arcu.
+      </p>
+    </div>
+
+    <script>
+      let text = document.getElementById("text");
+      let bird1 = document.getElementById("bird1");
+      let bird2 = document.getElementById("bird2");
+      let btn = document.getElementById("btn");
+      let rocks = document.getElementById("rocks");
+      let forest = document.getElementById("forest");
+      let water = document.getElementById("water");
+      let header = document.getElementById("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + "%";
+        bird1.style.top = value * -1.5 + "px";
+        bird1.style.left = value * 2 + "px";
+        bird2.style.top = value * -1.5 + "px";
+        bird2.style.left = value * -5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        rocks.style.top = value * -0.12 + "px";
+        forest.style.top = value * 0.25 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
